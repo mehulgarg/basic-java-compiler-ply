@@ -1,0 +1,345 @@
+Starting parsing
+LexToken(CLASS,'class',1,0)
+LexToken(NAME,'test',1,6)
+LexToken({,'{',1,10)
+LexToken(INT,'int',2,20)
+LexToken(NAME,'d',2,24)
+LexToken(=,'=',2,26)
+LexToken(NUM,'0',2,28)
+LexToken(;,';',2,29)
+LexToken(PUBLIC,'public',3,39)
+LexToken(STATIC,'static',3,46)
+LexToken(VOID,'void',3,53)
+LexToken(MAIN,'main',3,58)
+LexToken((,'(',3,62)
+LexToken(STRING,'String',3,63)
+LexToken([,'[',3,69)
+LexToken(],']',3,70)
+LexToken(NAME,'args',3,72)
+LexToken(),')',3,76)
+LexToken({,'{',3,78)
+LexToken(INT,'int',4,92)
+LexToken(NAME,'a',4,96)
+LexToken(=,'=',4,98)
+LexToken(NUM,'10',4,100)
+LexToken(;,';',4,102)
+LexToken(INT,'int',5,116)
+LexToken(NAME,'b',5,120)
+LexToken(=,'=',5,122)
+LexToken(NUM,'20',5,124)
+LexToken(;,';',5,126)
+LexToken(FLOAT,'float',6,140)
+LexToken(NAME,'c',6,146)
+LexToken(=,'=',6,148)
+LexToken(NUM,'0.0',6,150)
+LexToken(;,';',6,153)
+LexToken(IF,'if',7,167)
+LexToken((,'(',7,170)
+LexToken(NAME,'a',7,171)
+LexToken(>,'>',7,173)
+LexToken(NAME,'b',7,175)
+LexToken(),')',7,176)
+LexToken({,'{',7,178)
+LexToken(INT,'int',8,196)
+LexToken(NAME,'jail',8,200)
+LexToken(=,'=',8,205)
+LexToken(NUM,'0',8,207)
+LexToken(;,';',8,208)
+LexToken(INT,'int',9,226)
+LexToken(NAME,'a',9,230)
+LexToken(=,'=',9,232)
+LexToken(NUM,'10',9,234)
+LexToken(;,';',9,236)
+LexToken(},'}',10,250)
+LexToken(ELSE,'else',10,252)
+LexToken({,'{',10,257)
+LexToken(INT,'int',11,275)
+LexToken(NAME,'try',11,279)
+LexToken(=,'=',11,283)
+LexToken(NUM,'1',11,285)
+LexToken(;,';',11,286)
+LexToken(},'}',12,300)
+LexToken(DO,'do',13,314)
+LexToken({,'{',13,317)
+LexToken(NAME,'a',14,335)
+LexToken(=,'=',14,337)
+LexToken(NUM,'3',14,339)
+LexToken(;,';',14,340)
+LexToken(},'}',15,354)
+LexToken(WHILE,'while',15,356)
+LexToken((,'(',15,362)
+LexToken(NAME,'a',15,363)
+LexToken(>,'>',15,365)
+LexToken(NAME,'b',15,367)
+LexToken(),')',15,368)
+LexToken(;,';',15,369)
+LexToken(},'}',16,379)
+LexToken(STATIC,'static',17,389)
+LexToken(INT,'int',17,396)
+LexToken(NAME,'hello',17,400)
+LexToken((,'(',17,405)
+LexToken(INT,'int',17,406)
+LexToken(NAME,'k',17,410)
+LexToken(,,',',17,411)
+LexToken(INT,'int',17,413)
+LexToken(NAME,'j',17,417)
+LexToken(),')',17,418)
+LexToken({,'{',17,420)
+LexToken(INT,'int',18,434)
+LexToken(NAME,'m',18,438)
+LexToken(;,';',18,439)
+LexToken(NAME,'m',19,453)
+LexToken(=,'=',19,455)
+LexToken(NAME,'k',19,457)
+LexToken(+,'+',19,459)
+LexToken(NAME,'j',19,461)
+LexToken(;,';',19,462)
+LexToken(RETURN,'return',20,476)
+LexToken(NUM,'0',20,483)
+LexToken(;,';',20,484)
+LexToken(},'}',21,498)
+LexToken(},'}',22,508)
+
+1 classtest{
+2 intd=0;
+3 publicstaticvoidmain(String[]args){
+4 inta=10;
+5 intb=20;
+6 floatc=0.0;
+7 if(a>b){
+8 intjail=0;
+9 inta=10;
+10 }else{
+11 inttry=1;
+12 }
+13 do{
+14 a=3;
+15 }while(a>b);
+16 }
+17 staticinthello(intk,intj){
+18 intm;
+19 m=k+j;
+20 return0;
+21 }
+22 }
+main method decl  [opening_bracket, LexToken({,'{',23,10)]
+method declaration  [primitive_type, LexToken(INT,'int',24,20)] [None, 'int']
+P of 1  int
+method declaration  [type, primitive_type] [None, 'int']
+P of 1  int
+method declaration  [variable_declarator_id, LexToken(NAME,'d',24,24)] [None, 'd']
+P of 1  d
+literal 0
+primary 0
+VAL 0
+Global varible [field_declartaion, modifiers_opt, type, variable_declarators, LexToken(;,';',24,29)] [None, None, 'int', 'd', ';']
+method declaration  [primitive_type, LexToken(VOID,'void',25,53)] [None, 'void']
+P of 1  void
+method declaration  [type, primitive_type] [None, 'void']
+P of 1  void
+main method decl  [tmain_name, modifiers_opt, type, LexToken(MAIN,'main',25,58)]
+method declaration  [primitive_type, LexToken(STRING,'String',25,63)] [None, 'String']
+P of 1  String
+method declaration  [dims, LexToken([,'[',25,69), LexToken(],']',25,70)] [None, '[', ']']
+type varible_declarator_id  [ ] [dims, LexToken([,'[',25,69), LexToken(],']',25,70)]
+P[1], P[2] [ ,  ]
+P of 1  [
+method declaration  [array_type, primitive_type, dims] [None, 'String', '[']
+type varible_declarator_id  String [ [array_type, primitive_type, dims]
+P[1], P[2] String ,  [
+P of 1  String
+method declaration  [type, array_type] [None, 'String']
+P of 1  String
+method declaration  [variable_declarator_id, LexToken(NAME,'args',25,72)] [None, 'args']
+P of 1  args
+method declaration  [formal_parameter, type, variable_declarator_id] [None, 'String', 'args']
+type varible_declarator_id  String args [formal_parameter, type, variable_declarator_id]
+P[1], P[2] String ,  args
+P of 1  String
+method declaration  [formal_parameter_list, formal_parameter] [None, 'String']
+P of 1  String
+method declaration  [formal_parameter_list_opt, formal_parameter_list] [None, 'String']
+P of 1  String
+main method decl  [tmain_header, tmain_name, LexToken((,'(',25,62), formal_parameter_list_opt, LexToken(),')',25,76)]
+main method decl  [opening_bracket, LexToken({,'{',25,78)]
+method declaration  [primitive_type, LexToken(INT,'int',26,92)] [None, 'int']
+P of 1  int
+method declaration  [type, primitive_type] [None, 'int']
+P of 1  int
+method declaration  [variable_declarator_id, LexToken(NAME,'a',26,96)] [None, 'a']
+P of 1  a
+literal 10
+primary 10
+VAL 10
+type variable  int a slice  [local_variable_declaration, type, variable_declarators]
+type variable  a ; slice  [local_variable_declaration_statement, local_variable_declaration, LexToken(;,';',26,102)]
+block statement [block_statement, local_variable_declaration_statement] [';', ';']
+block statement [block_statements, block_statement] [';', ';']
+method declaration  [primitive_type, LexToken(INT,'int',27,116)] [None, 'int']
+P of 1  int
+method declaration  [type, primitive_type] [None, 'int']
+P of 1  int
+method declaration  [variable_declarator_id, LexToken(NAME,'b',27,120)] [None, 'b']
+P of 1  b
+literal 20
+primary 20
+VAL 20
+type variable  int b slice  [local_variable_declaration, type, variable_declarators]
+type variable  b ; slice  [local_variable_declaration_statement, local_variable_declaration, LexToken(;,';',27,126)]
+block statement [block_statement, local_variable_declaration_statement] [';', ';']
+block statement [block_statements, block_statements, block_statement] [';', ';', ';']
+method declaration  [primitive_type, LexToken(FLOAT,'float',28,140)] [None, 'float']
+P of 1  float
+method declaration  [type, primitive_type] [None, 'float']
+P of 1  float
+method declaration  [variable_declarator_id, LexToken(NAME,'c',28,146)] [None, 'c']
+P of 1  c
+literal 0.0
+primary 0.0
+VAL 0.0
+type variable  float c slice  [local_variable_declaration, type, variable_declarators]
+type variable  c ; slice  [local_variable_declaration_statement, local_variable_declaration, LexToken(;,';',28,153)]
+block statement [block_statement, local_variable_declaration_statement] [';', ';']
+block statement [block_statements, block_statements, block_statement] [';', ';', ';']
+main method decl  [opening_bracket, LexToken({,'{',29,178)]
+method declaration  [primitive_type, LexToken(INT,'int',30,196)] [None, 'int']
+P of 1  int
+method declaration  [type, primitive_type] [None, 'int']
+P of 1  int
+method declaration  [variable_declarator_id, LexToken(NAME,'jail',30,200)] [None, 'jail']
+P of 1  jail
+literal 0
+primary 0
+VAL 0
+type variable  int jail slice  [local_variable_declaration, type, variable_declarators]
+type variable  jail ; slice  [local_variable_declaration_statement, local_variable_declaration, LexToken(;,';',30,208)]
+block statement [block_statement, local_variable_declaration_statement] [';', ';']
+block statement [block_statements, block_statement] [';', ';']
+method declaration  [primitive_type, LexToken(INT,'int',31,226)] [None, 'int']
+P of 1  int
+method declaration  [type, primitive_type] [None, 'int']
+P of 1  int
+method declaration  [variable_declarator_id, LexToken(NAME,'a',31,230)] [None, 'a']
+P of 1  a
+literal 10
+primary 10
+VAL 10
+type variable  int a slice  [local_variable_declaration, type, variable_declarators]
+type variable  a ; slice  [local_variable_declaration_statement, local_variable_declaration, LexToken(;,';',31,236)]
+block statement [block_statement, local_variable_declaration_statement] [';', ';']
+block statement [block_statements, block_statements, block_statement] [';', ';', ';']
+main method decl  [closing_bracket, LexToken(},'}',32,250)]
+main method decl  [opening_bracket, LexToken({,'{',32,257)]
+method declaration  [primitive_type, LexToken(INT,'int',33,275)] [None, 'int']
+P of 1  int
+method declaration  [type, primitive_type] [None, 'int']
+P of 1  int
+method declaration  [variable_declarator_id, LexToken(NAME,'try',33,279)] [None, 'try']
+P of 1  try
+literal 1
+primary 1
+VAL 1
+type variable  int try slice  [local_variable_declaration, type, variable_declarators]
+type variable  try ; slice  [local_variable_declaration_statement, local_variable_declaration, LexToken(;,';',33,286)]
+block statement [block_statement, local_variable_declaration_statement] [';', ';']
+block statement [block_statements, block_statement] [';', ';']
+main method decl  [closing_bracket, LexToken(},'}',34,300)]
+if statement [else, LexToken(ELSE,'else',32,252), opening_bracket, block_statements, closing_bracket]
+if statement [if_then_else_statement, LexToken(IF,'if',29,167), LexToken((,'(',29,170), expression, LexToken(),')',29,176), opening_bracket, block_statements, closing_bracket, else]
+block statement [block_statement, statement] [None, None]
+block statement [block_statements, block_statements, block_statement] [';', ';', None]
+main method decl  [opening_bracket, LexToken({,'{',35,317)]
+literal 3
+primary 3
+block statement [block_statement, statement] [None, None]
+block statement [block_statements, block_statement] [None, None]
+main method decl  [closing_bracket, LexToken(},'}',37,354)]
+block statement [block_statement, statement] [None, None]
+block statement [block_statements, block_statements, block_statement] [';', ';', None]
+method declaration  [method_body, block_statements] [None, ';']
+P of 1  ;
+main method decl  [closing_bracket, LexToken(},'}',38,379)]
+main method decl  [tmain, tmain_header, opening_bracket, method_body, closing_bracket]
+method declaration  [primitive_type, LexToken(INT,'int',39,396)] [None, 'int']
+P of 1  int
+method declaration  [type, primitive_type] [None, 'int']
+P of 1  int
+method declaration  [method_header_name, modifiers_opt, type, LexToken(NAME,'hello',39,400)] [None, None, 'int', 'hello']
+P4  hello
+P[1], P[2] None ,  int
+P of 1  None
+method declaration  [primitive_type, LexToken(INT,'int',39,406)] [None, 'int']
+P of 1  int
+method declaration  [type, primitive_type] [None, 'int']
+P of 1  int
+method declaration  [variable_declarator_id, LexToken(NAME,'k',39,410)] [None, 'k']
+P of 1  k
+method declaration  [formal_parameter, type, variable_declarator_id] [None, 'int', 'k']
+type varible_declarator_id  int k [formal_parameter, type, variable_declarator_id]
+P[1], P[2] int ,  k
+P of 1  int
+method declaration  [formal_parameter_list, formal_parameter] [None, 'int']
+P of 1  int
+method declaration  [primitive_type, LexToken(INT,'int',39,413)] [None, 'int']
+P of 1  int
+method declaration  [type, primitive_type] [None, 'int']
+P of 1  int
+method declaration  [variable_declarator_id, LexToken(NAME,'j',39,417)] [None, 'j']
+P of 1  j
+method declaration  [formal_parameter, type, variable_declarator_id] [None, 'int', 'j']
+type varible_declarator_id  int j [formal_parameter, type, variable_declarator_id]
+P[1], P[2] int ,  j
+P of 1  int
+method declaration  [formal_parameter_list, formal_parameter_list, LexToken(,,',',39,411), formal_parameter] [None, 'int', ',', 'int']
+P4  int
+P[1], P[2] int ,  ,
+P of 1  int
+method declaration  [formal_parameter_list_opt, formal_parameter_list] [None, 'int']
+P of 1  int
+method declaration  [method_header, method_header_name, LexToken((,'(',39,405), formal_parameter_list_opt, LexToken(),')',39,418)] [None, None, '(', 'int', ')']
+P4  int
+P[1], P[2] None ,  (
+P of 1  None
+main method decl  [opening_bracket, LexToken({,'{',39,420)]
+method declaration  [primitive_type, LexToken(INT,'int',40,434)] [None, 'int']
+P of 1  int
+method declaration  [type, primitive_type] [None, 'int']
+P of 1  int
+method declaration  [variable_declarator_id, LexToken(NAME,'m',40,438)] [None, 'm']
+P of 1  m
+type variable  int m slice  [local_variable_declaration, type, variable_declarators]
+type variable  m ; slice  [local_variable_declaration_statement, local_variable_declaration, LexToken(;,';',40,439)]
+block statement [block_statement, local_variable_declaration_statement] [';', ';']
+block statement [block_statements, block_statement] [';', ';']
+block statement [block_statement, statement] [None, None]
+block statement [block_statements, block_statements, block_statement] [';', ';', None]
+literal 0
+primary 0
+block statement [block_statement, statement] [None, None]
+block statement [block_statements, block_statements, block_statement] [';', ';', None]
+method declaration  [method_body, block_statements] [None, ';']
+P of 1  ;
+main method decl  [closing_bracket, LexToken(},'}',43,498)]
+p_method decl  [method_declaration, method_header, opening_bracket, method_body, closing_bracket]
+main method decl  [closing_bracket, LexToken(},'}',44,508)]
+main method decl  [class_body, opening_bracket, classbodydecllist, closing_bracket]
+start 
+1
+var list  ['d', 'args', 'a', 'b', 'c', 'jail', 'a', 'try', 'k', 'j', 'm']
+SYMBOL TABLE
+
+
+0
+{}
+0.1
+{'d': var_name: d, scope_num: 1, val: none, var_type: int, 'args': var_name: args, scope_num: 2, val: none, var_type: String, 'k': var_name: k, scope_num: 2, val: none, var_type: int, 'j': var_name: j, scope_num: 2, val: none, var_type: int}
+0.1.1
+{'a': var_name: a, scope_num: 2, val: none, var_type: int, 'b': var_name: b, scope_num: 2, val: none, var_type: int, 'c': var_name: c, scope_num: 2, val: none, var_type: float}
+0.1.1.1
+{'jail': var_name: jail, scope_num: 3, val: none, var_type: int, 'a': var_name: a, scope_num: 3, val: none, var_type: int}
+0.1.1.2
+{'try': var_name: try, scope_num: 3, val: none, var_type: int}
+0.1.1.3
+{}
+0.1.2
+{'m': var_name: m, scope_num: 2, val: none, var_type: int}

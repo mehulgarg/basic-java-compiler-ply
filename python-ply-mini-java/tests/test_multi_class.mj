@@ -1,0 +1,108 @@
+class Test {
+
+   int a, b, c;
+
+   string nombres, apellidos;
+
+   int [] arreglo;
+
+   void myMethod(int[] a, int b, string c, boolean d)
+   {
+       int a = 10, x = 20, y = 40;
+
+       int b = 10.50, f = 34.55;
+
+       binary bin = b'0100101010100101';
+
+
+       // event(propagate); Syntax Error: Unexpected '(', near line '13'
+
+       this.event(a);
+
+       while(true)
+       {
+            this.callInit(b);
+
+            if(a >= d)
+            {
+                if( a <= b)
+                {
+                    Class a = new otherClass();
+                    // int arreglo = new int [a];  Syntax Error: Unexpected ']', near line '27'
+                    this.print(a.length);
+                    continue;
+                }
+                else
+                {
+                    this.function((a == b) && (a != 0));
+                    break;
+                    {
+                        int number = thi.hello(param);
+                        {
+                           return number * 10e-10;
+                        }
+                    }
+                }
+            }
+
+       }
+
+
+        return (a + b - 10) / (10 * 100) * -1;
+
+   }
+
+   void anotherMethod(boolean result)
+   {
+        if(result) // if(!result) -> Syntax Error: Unexpected 'result', near line '46'
+        {
+            int param = this.calculate(100);
+            this.myMethod(param);
+        }
+   }
+
+
+   void countElements() // int countElements() -> Syntax Error: Unexpected '(', near line '55'
+   {
+        return this;
+   }
+
+}
+
+
+class OrderDatatable extends Datatable {
+
+    string nombre, apellido;
+
+    int a, b, c;
+
+    boolean bool;
+
+    Request request;
+
+    int[] arrayA, arrayB;
+
+    int año;
+
+    void getArea(int[] width, int[] height)
+    {
+        return height * widht;
+	}
+
+	void getHeight()
+	{
+	    return this.height;
+	}
+
+	void getWidth()
+	{
+        return this.width;
+	}
+
+}
+
+class ZillowLeadExtractor extends LeadExtractor {
+
+
+
+}

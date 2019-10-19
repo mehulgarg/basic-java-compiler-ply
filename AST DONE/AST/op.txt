@@ -1,0 +1,134 @@
+Starting parsing
+LexToken(CLASS,'class',1,0)
+LexToken(NAME,'test',1,6)
+LexToken({,'{',1,10)
+LexToken(INT,'int',2,20)
+LexToken(MAIN,'main',2,24)
+LexToken((,'(',2,28)
+LexToken(),')',2,29)
+LexToken({,'{',2,31)
+LexToken(IF,'if',3,41)
+LexToken((,'(',3,43)
+LexToken(NAME,'a',3,44)
+LexToken(GREATER,'>',3,46)
+LexToken(NAME,'b',3,48)
+LexToken(),')',3,49)
+LexToken({,'{',3,51)
+LexToken(INT,'int',4,65)
+LexToken(NAME,'a',4,69)
+LexToken(ASSIGN,'=',4,71)
+LexToken(NUM,'3',4,73)
+LexToken(;,';',4,74)
+LexToken(INT,'int',5,88)
+LexToken(NAME,'b',5,92)
+LexToken(ASSIGN,'=',5,94)
+LexToken(NUM,'21',5,96)
+LexToken(;,';',5,98)
+LexToken(INT,'int',6,113)
+LexToken(NAME,'c',6,117)
+LexToken(ASSIGN,'=',6,119)
+LexToken(NUM,'12',6,121)
+LexToken(;,';',6,123)
+LexToken(},'}',7,133)
+LexToken(ELSE,'else',7,135)
+LexToken({,'{',7,140)
+LexToken(FLOAT,'float',8,154)
+LexToken(NAME,'a',8,160)
+LexToken(ASSIGN,'=',8,162)
+LexToken(NUM,'3',8,164)
+LexToken(;,';',8,165)
+LexToken(},'}',9,175)
+LexToken(},'}',10,185)
+LexToken(},'}',11,195)
+
+1 class test {
+2 int main ( ) {
+3 if ( a > b ) {
+4 int a = 3 ;
+5 int b = 21 ;
+6 int c = 12 ;
+7 } else {
+8 float a = 3 ;
+9 }
+10 }
+11 }
+P[1] for expr a <class 'str'>
+[Expr, name]
+P[1] for expr b <class 'str'>
+[Expr, name]
+Exp bin slice  [exprbinaryexpr, Expr, LexToken(GREATER,'>',14,46), Expr]
+[Expr, exprbinaryexpr]
+p_assignment_expr [assignment_expression, Expr]
+IF ) [closing_parantheses_if, LexToken(),')',14,49)]
+P of 1  a
+P[1] for expr 3 <class 'str'>
+[Expr, literal]
+P of 1  b
+P[1] for expr 21 <class 'str'>
+[Expr, literal]
+P of 1  c
+P[1] for expr 12 <class 'str'>
+[Expr, literal]
+closing bracket lolcat
+P of 1  a
+P[1] for expr 3 <class 'str'>
+[Expr, literal]
+closing bracket lolcat
+ELSE STATEMENT
+if statement [else, else_stmt, opening_bracket, block_statements, closing_bracket]
+ELSE STATEMENT
+if statement [if_then_else_statement, LexToken(IF,'if',14,41), LexToken((,'(',14,43), expression, closing_parantheses_if, opening_bracket, block_statements, closing_bracket, else]
+P of 1  None
+closing bracket lolcat
+closing bracket lolcat
+start 
+1
+var list  ['a', 'b', 'c', 'a']
+SYMBOL TABLE
+0
+{}
+0.1
+{}
+0.1.1
+{}
+0.1.1.1
+{'a': var_name: a, scope_num: 3, val: none, var_type: None, 'b': var_name: b, scope_num: 3, val: none, var_type: None, 'c': var_name: c, scope_num: 3, val: none, var_type: None}
+0.1.1.2
+{'a': var_name: a, scope_num: 3, val: none, var_type: None}
+('class', 'test')
+	test
+	main body
+		main
+		if
+			>
+				a
+				b
+			multi block statements
+				multi block statements
+					=
+						a
+						3
+					=
+						b
+						21
+				=
+					c
+					12
+			else
+				=
+					a
+					3
+
+ICG
+
+
+['>', 'a', 'b', 't0']
+['ifFalse', 't0', ' ', 'L0']
+['=', ' ', '3', 'a']
+['=', ' ', '21', 'b']
+['=', ' ', '12', 'c']
+['goto', ' ', ' ', 'L0']
+['Label', ' ', ' ', 'L0']
+['=', ' ', '3', 'a']
+['Label', ' ', ' ', 'L1']
+Temp stack []

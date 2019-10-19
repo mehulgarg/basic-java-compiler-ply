@@ -1,0 +1,141 @@
+
+a
+
+_
+
+aá
+eé
+ií
+oó
+uú
+nñ
+NÑ
+AÁ
+EÉ
+IÍ
+OÓ
+UÚ
+
+ARRAY
+array
+Array
+
+
+identificador8
+
+áaa
+éee
+íii
+óoo
+úuu
+ñnn
+1aa
+
+año
+presión
+
+classs extendss voidd intt booleann stringg
+returnn iff elsee whilee breakk continuee
+thiss neww lengthh truee falsee nulll
+
+class extends void int boolean string
+return if else while break continue
+this new length true false null
+
+0 1 2 3 4 5 6 7 8 9
+-0 -1 -2 -3 -4 -5 -6 -7 -8 -9
+
+1000
+-2000
+
+4.50
+-39.50
+
+-2.34 E-2
+-2.34E-2
+-2.34 e-2
+-2.34e-2
+2000e-2
+
+b'1010101010101'
+
+b'9393939393'
+
+"esto es una cadena"
+
+"cadena
+
++ - * / %
+
+< > <= >=
+
+== ! =
+
+0xafff
+
+"\" hola \" hola\n"
+
+8hola
+ñhola
+íahola
+
+ident8
+
+acción = 100;
+
+//// Este es un comentario de línea
+
+/* Esto es un comentario multiline
+1.
+2.
+3
+
+*/
+
+*/
+
+boolean flag = true;
+
+
+/*jñaklsdfldsa
+jasñldfjñladsfjl
+jaklñsdfjl
+
+
+
+ajsñlkdfasdf safjsdf ñsdajf
+
+
+*/
+
+constant = (-4.5 * -5.33e-10) / 1000e10;
+
+int negativo = -2147483648;
+
+int positivo = 2147483648;
+
+cientific = 2.34 E-2;
+
+binary = b'100001';
+
+string super_string = "\"\\\t\n\y"
+
+string bad_string = "baaaaad boy;
+
+null
+true falsenew
+
+new == =& && ||
+
+void main ( string[] args) {
+    for (int i = 0; i <= length(args); i++) {
+        float b = (i * pi);
+    }
+}
+
+a)
+
+año
+
+BOOLEAN
+TRUE True true

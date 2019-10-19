@@ -1,0 +1,207 @@
+/** IDENTIFICADORES **/
+
+
+a -> LexToken(IDEN,u'a',3,25)
+
+_ -> LexToken(IDEN,u'_',4,36)
+----------------------------------------
+
+
+ARRAY -> LexToken(IDEN,u'ARRAY',17,63)
+array -> LexToken(IDEN,u'array',19,70)
+Array -> LexToken(IDEN,u'Array',22,80)
+----------------------------------------
+
+
+áaa -> Character á not recognized at line 24
+       LexToken(IDEN,u'aa',24,88)
+
+éee -> Character é not recognized at line 25
+       LexToken(IDEN,u'ee',25,92)
+
+íii -> Character í not recognized at line 26
+       LexToken(IDEN,u'ii',26,96)
+
+óoo -> Character ó not recognized at line 27
+       LexToken(IDEN,u'oo',27,100)
+
+úuu -> Character ú not recognized at line 28
+       LexToken(IDEN,u'uu',28,104)
+
+ñnn -> Character ñ not recognized at line 29
+       LexToken(IDEN,u'nn',29,108)
+
+1aa -> LexToken(NUMBER,1,30,111)
+       LexToken(IDEN,u'aa',30,112)
+
+Bug: Debería informar que el token áaa no se reconoce,
+      o está bien á no reconocido, aa es un IDEN.
+----------------------------------------
+
+
+identificador8 -> LexToken(IDEN,u'identificador',32,116)
+                  LexToken(NUMBER,8,32,129)
+
+Bug: Debería informar que el token identificador8
+     no se reconoce, o está bien separar
+     IDEN y NUMBER.
+----------------------------------------
+
+
+aá -> LexToken(IDEN,u'a_',3,25)
+eé -> LexToken(IDEN,u'e_',4,28)
+ií -> LexToken(IDEN,u'i_',5,31)
+oó -> LexToken(IDEN,u'o_',6,34)
+uú -> LexToken(IDEN,u'u_',7,37)
+nñ -> LexToken(IDEN,u'n_',8,40)
+NÑ -> LexToken(IDEN,u'N_',9,43)
+AÁ -> LexToken(IDEN,u'A_',10,46)
+EÉ -> LexToken(IDEN,u'E_',11,49)
+IÍ -> LexToken(IDEN,u'I_',12,52)
+OÓ -> LexToken(IDEN,u'O_',13,55)
+UÚ -> LexToken(IDEN,u'U_',14,58)
+año -> LexToken(IDEN,u'a_o',34,132)
+presión -> LexToken(IDEN,u'presi_n',35,136)
+----------------------------------------
+
+
+/** PALABRAS RESERVADAS **/
+
+
+class -> LexToken(CLASS,u'class',42,271)
+extends -> LexToken(EXTENDS,u'extends',42,277)
+void -> LexToken(VOID,u'void',42,285)
+int -> LexToken(INT,u'int',42,290)
+boolean -> LexToken(BOOLEAN,u'boolean',42,294)
+string -> LexToken(STRING,u'string',42,302)
+return -> LexToken(RETURN,u'return',43,309)
+if -> LexToken(IF,u'if',43,316)
+else -> LexToken(ELSE,u'else',43,319)
+while -> LexToken(WHILE,u'while',43,324)
+break -> LexToken(BREAK,u'break',43,330)
+continue -> LexToken(CONTINUE,u'continue',43,336)
+this -> LexToken(THIS,u'this',44,345)
+new -> LexToken(NEW,u'new',44,350)
+length -> LexToken(LENGTH,u'length',44,354)
+true -> LexToken(TRUE,u'true',44,361)
+false -> LexToken(FALSE,u'false',44,366)
+null -> LexToken(NULL,u'null',44,372)
+----------------------------------------
+
+
+classs -> LexToken(IDEN,u'classs',38,146)
+extendss -> LexToken(IDEN,u'extendss',38,153)
+voidd -> LexToken(IDEN,u'voidd',38,162)
+intt -> LexToken(IDEN,u'intt',38,168)
+booleann -> LexToken(IDEN,u'booleann',38,173)
+stringg -> LexToken(IDEN,u'stringg',38,182)
+returnn -> LexToken(IDEN,u'returnn',39,190)
+iff -> LexToken(IDEN,u'iff',39,198)
+elsee -> LexToken(IDEN,u'elsee',39,202)
+whilee -> LexToken(IDEN,u'whilee',39,208)
+breakk -> LexToken(IDEN,u'breakk',39,215)
+continuee -> LexToken(IDEN,u'continuee',39,222)
+thiss -> LexToken(IDEN,u'thiss',40,232)
+neww -> LexToken(IDEN,u'neww',40,238)
+lengthh -> LexToken(IDEN,u'lengthh',40,243)
+truee -> LexToken(IDEN,u'truee',40,251)
+falsee -> LexToken(IDEN,u'falsee',40,257)
+nulll -> LexToken(IDEN,u'nulll',40,264)
+----------------------------------------
+
+/** COMENTARIOS **/
+
+//// Este es un comentario de línea -> Se ignora
+
+/** Comentario.
+    Este es un comentario multilinea -> Ignora archivo completo.
+    Fin Comentario
+**/
+
+/* -> Se reconoce cómo
+      LexToken(DIVISION,u'/',47,415)
+      LexToken(MULTIPLICATION,u'*',47,416)
+----------------------------------------
+
+/** NUMERICOS **/
+
+0 -> LexToken(NUMBER,0,49,419)
+1 -> LexToken(NUMBER,1,49,421)
+2 -> LexToken(NUMBER,2,49,423)
+3 -> LexToken(NUMBER,3,49,425)
+4 -> LexToken(NUMBER,4,49,427)
+5 -> LexToken(NUMBER,5,49,429)
+6 -> LexToken(NUMBER,6,49,431)
+7 -> LexToken(NUMBER,7,49,433)
+8 -> LexToken(NUMBER,8,49,435)
+9 -> LexToken(NUMBER,9,49,437)
+-0 -> LexToken(NUMBER,0,50,439)
+-1 -> LexToken(NUMBER,-1,50,442)
+-2 -> LexToken(NUMBER,-2,50,445)
+-3 -> LexToken(NUMBER,-3,50,448)
+-4 -> LexToken(NUMBER,-4,50,451)
+-5 -> LexToken(NUMBER,-5,50,454)
+-6 -> LexToken(NUMBER,-6,50,457)
+-7 -> LexToken(NUMBER,-7,50,460)
+-8 -> LexToken(NUMBER,-8,50,463)
+-9 ->LexToken(NUMBER,-9,50,466)
+
+1000 -> LexToken(NUMBER,1000,52,470)
+-2000 -> LexToken(NUMBER,-2000,53,475)
+4.50 -> LexToken(FLOAT,u'4.50',55,482)
+-39.50 -> LexToken(FLOAT,u'-39.50',56,487)
+
+
+-2.34 E-2 -> LexToken(CIENTIFIC,u'-2.34 E-2',51,438)
+-2.34E-2 -> LexToken(CIENTIFIC,u'-2.34E-2',52,448)
+-2.34 e-2 -> LexToken(CIENTIFIC,u'-2.34 e-2',53,457)
+-2.34e-2 -> LexToken(CIENTIFIC,u'-2.34e-2',54,467)
+2000e-2 -> LexToken(CIENTIFIC,u'2000e-2',55,476)
+----------------------------------------
+
+/** NUMEROS BINARIOS **/
+
+b'1010101010101' -> LexToken(BINARY,5461,64,542)
+
+b'9393939393' -> LexToken(IDEN,u'b',66,560)
+                 LexToken(SINGLEQUOTE,u"'",66,561)
+                 LexToken(NUMBER,9393939393,66,562)
+                 LexToken(SINGLEQUOTE,u"'",66,572)
+
+Bug: De nuevo, se debe tomar b'9393939393'
+     como un token invalido, está bien que
+     quede separado en 4 tokens.
+----------------------------------------
+
+/** CADENAS DE CARACTERES **/
+
+"esto es una cadena" -> LexToken(STRING,u'"esto es una cadena"',68,575)
+
+"cadena -> LexToken(DOUBLEQUOTE,u'"',70,597)
+           LexToken(IDEN,u'cadena',70,598)
+
+Bug: debe reconocerse como un token erroneo,
+     o está bien como DOUBLEQUOTE e IDEN.
+
+Bug: No reconce \"
+----------------------------------------
+
+/** OPERADORES **/
++ -> LexToken(ADDITION,u'+',72,606)
+- -> LexToken(MINUS,u'-',72,608)
+* -> LexToken(MULTIPLICATION,u'*',72,610)
+/ -> LexToken(DIVISION,u'/',72,612)
+% -> LexToken(MODULO,u'%',72,614)
+< -> LexToken(LESS,u'<',74,617)
+> -> LexToken(GREATER,u'>',74,619)
+<= -> LexToken(LESSEQUAL,u'<=',74,621)
+>= -> LexToken(GREATEREQUAL,u'>=',74,624)
+== -> LexToken(EQUAL,u'==',76,628)
+! -> LexToken(NO,u'!',76,631)
+= -> LexToken(ASSIGNMENT,u'=',76,633)
+
+
+
+
+
+
